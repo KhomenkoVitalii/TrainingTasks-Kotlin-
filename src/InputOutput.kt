@@ -1,4 +1,5 @@
 import java.util.Scanner
+import kotlin.math.abs
 import kotlin.math.pow
 import kotlin.math.sqrt
 
@@ -104,7 +105,7 @@ fun Task_12(){
     var s3 = s1 - s2;
 
     println("s1: $s1");
-    println("s2: $s2");
+    println("s2: $s2")
     println("s2: $s3");
 }
 
@@ -113,5 +114,128 @@ fun Task_13(){
     var r = l/(2*Math.PI);
     var s = Math.PI * r.pow(2);
 
-    println();
+    println(r);
+    println(s);
+}
+
+fun Task_14(){
+    var s: Float = sc.nextFloat();
+    var r = sqrt(s/Math.PI);
+    var d = 2*r;
+    var l = 2*Math.PI*r;
+
+    println(d);
+    println(l);
+}
+
+fun Task_15(){
+    var a: Float = sc.nextFloat();
+    var b: Float = sc.nextFloat();
+    var c: Float = sc.nextFloat();
+
+    var k = abs(c-a)
+    var l = abs(c-b)
+
+    var f = k + l;
+
+    println(k);
+    println(l);
+    println(f);
+}
+
+fun Task_16(){
+    var x1: Float = sc.nextFloat();
+    var y1: Float = sc.nextFloat();
+
+    var x2: Float = sc.nextFloat();
+    var y2: Float = sc.nextFloat();
+
+    var ab = abs(y2-y1);
+    var bc = abs(x2-x1);
+
+    var p = 2*(ab+bc);
+    var s = ab*bc;
+
+    println(p);
+    println(s);
+}
+
+fun Task_17(){
+    var points1 = listOf<Double>(sc.nextDouble(), sc.nextDouble());
+    var points2 = listOf<Double>(sc.nextDouble(), sc.nextDouble());
+
+    var l = sqrt((points2[0]-points1[0]).pow(2) + (points2[1] - points1[1]).pow(2));
+    println(l);
+}
+
+fun Task_18() {
+    var a: Float = sc.nextFloat();
+    var b: Float = sc.nextFloat();
+
+    var c = b;
+    b=a;
+    a=c;
+
+    println("a: $a, b: $b");
+}
+
+fun Task_19(){
+    var a: Float = sc.nextFloat();
+    var b: Float = sc.nextFloat();
+
+    var c = a;
+    a = b;
+    b = c;
+
+    println(a);
+    println(b);
+}
+
+fun Task_20(){
+    var x: Float = sc.nextFloat();
+
+    var y = 3 * x.pow(6) - 6* x.pow(2) - 7;
+
+    println(y);
+}
+
+fun Task_21(){
+    var x: Float = sc.nextFloat();
+
+    var y = 4*(x-3).pow(6) - 7 * (x-3).pow(3) + 2;
+
+    println(y);
+}
+
+fun Task_22(){
+    var a: Float = sc.nextFloat();
+    var a1 = a.pow(2);
+    var a2 = a.pow(4);
+    var a3 = a.pow(8);
+
+    println("a1: $a1; a2: $a2, a3: $a3");
+}
+
+fun Task_23(){
+    var alpha = sc.nextDouble();
+
+    var deg = Math.toRadians(alpha);
+    println("alpha: $alpha - $deg radians");
+}
+
+fun Task_24(){
+    var deg = sc.nextDouble();
+
+    var alpha = Math.toDegrees(deg);
+    println("alpha: $alpha - $deg radians");
+}
+
+fun Task_25(){
+    var v1: Float = sc.nextFloat();
+    var v2: Float = sc.nextFloat();
+    var s: Float = sc.nextFloat();
+    var t: Float = sc.nextFloat();
+    var l = t*(v1+v2);
+
+    println(l+s);
 }
